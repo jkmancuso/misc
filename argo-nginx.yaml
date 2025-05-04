@@ -5,8 +5,9 @@ metadata:
 spec:
   project: default
   source:
-    chart: nginx
-    repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 19.1.1
+    repoURL: https://github.com/jkmancuso/misc
+    targetRevision: HEAD
+    path: nginx
   destination:
     name: "in-cluster"
+    namespace: default
