@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+spec:
+  project: default
+  source:
+    chart: nginx
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 19.1.1
+  destination:
+    name: "in-cluster"
