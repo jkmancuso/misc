@@ -5,9 +5,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/jkmancuso/misc
+    repoURL: https://github.com/jkmancuso/misc.git
     targetRevision: HEAD
     path: nginx
   destination:
     name: "in-cluster"
     namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
